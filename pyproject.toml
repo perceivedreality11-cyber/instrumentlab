@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "instrumentlab-workstation"
+version = "1.0.0"
+description = "A hardware-independent instrumentation workstation with TCP acquisition, FFT and calibrated recording"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["instrumentation", "data-acquisition", "scpi", "fft", "tkinter", "calibration"]
+dependencies = []
+
+[project.scripts]
+instrumentlab = "instrumentlab.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["instrumentlab*"]
